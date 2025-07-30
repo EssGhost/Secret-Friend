@@ -13,10 +13,13 @@ function limpiarInput() {
 
 
 function agregarAmigo() {
-    let nombre = document.getElementById('amigo').value;
-    nombreDeAmigos.push(nombre);
+    let nombre = document.getElementById('amigo').value.trim();
+    if (!nombre) {
+        alert('No puedes agregar valores vacios')
+    } else {
+        nombreDeAmigos.push(nombre);
+    }
     limpiarInput();
     mostrarAmigos('listaAmigos', nombreDeAmigos);
 }
-
 
