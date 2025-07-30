@@ -23,3 +23,12 @@ function agregarAmigo() {
     mostrarAmigos('listaAmigos', nombreDeAmigos);
 }
 
+function sortearAmigo() {
+    if (nombreDeAmigos.length === 0) {
+        alert('Agrega algunos amigos para poder sortear');
+        return false;
+    }
+    let indiceAleatorio = Math.floor(Math.random() * nombreDeAmigos.length);
+    let nombreGanador = nombreDeAmigos[indiceAleatorio];
+    mostrarAmigos('resultado', nombreGanador);
+}
