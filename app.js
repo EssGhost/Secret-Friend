@@ -7,3 +7,16 @@ function mostrarAmigos(elemento, texto) {
 }
 
 
+function limpiarInput() {
+    document.getElementById('amigo').value = '';
+}
+
+
+function agregarAmigo() {
+    let nombre = document.getElementById('amigo').value;
+    nombreDeAmigos.push(nombre);
+    limpiarInput();
+    mostrarAmigos('listaAmigos', nombreDeAmigos);
+}
+
+
